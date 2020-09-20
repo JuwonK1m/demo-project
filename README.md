@@ -1,13 +1,13 @@
-# Spring-Boot-Starter-Setting
+# demo-project
 
-Spring-Boot-Starter-Setting은 많이 스프링 부트에서 많이 사용하는 라이브러리 및 기능을 적용한 예제 프로젝트입니다.
+Koreatech 강의평가 & 소스 서비스 프로젝트 BCSDLab Back-End 임시 Repository  
+(정식 Repository는 추후 BCSD Lab Organization에 private로 생성)
 
-pring-Boot-Starter-Setting is an example project that applies libraries and features that are commonly used in spring boots.
+## 환경
+Spring Boot, MySQL, Redis, Maven 3  
 
-적용된 라이브러리 및 기능 구성은 아래와 같습니다.
-The applied library and feature configurations are shown below.
-
-```bash
+## 사용 가능한 라이브러리 및 기능 예제
+```
 lucy-server-filter(sax-filter) - XSS 서블릿 필터(requestBody 적용 안됨)
 ReadableRequestWrapperFilter - request.InputStream 데이터 휘발 방지
 AOP - ASPECT-J를 사용. BootApplication에 @EnableAspectJAutoProxy 등록
@@ -27,44 +27,15 @@ CORS FILTER - WebConfig 파일에 설정되어 있음. 현재는 모든 접근�
 Scheduler - Scheduler의 로깅 능력을 향상시키기 위해 SchedulerConfig에 설정 적용. 실제 사용 예제는 org.tikim.boot.util.Scheduler 파일 내에 주석을 풀어주면 됨.
 Validate - hibernate의 vaildate 기능을 사용. Test, Test2 domain에 적용되어 있다.
 ```
-해당 프로젝트의 패키징 형태는 war 입니다.
 
-## Installation
+## 설정 파일
+src/main/resources에 application.config 생성 후, application.example.config 참고하여 작성 
 
-install Git, DBMS(example query consists of mysql), Redis, Maven 3
-
-```bash
-git clone ''
-
-// Usage를 참고하여 application.properties 작성
-// Create applications.properties by referring to Usage
-
-// 프로젝트 경로에서
-// in project path
-
+## 빌드
+프로젝트의 패키징 형태는 war 입니다. (이유: 배포할 서버와 관련한 Jenkins 설정 및 Tomcat이 이미 구축되어있음)
+``` bash
+// 이전 빌드 파일 삭제, war 패키징, JUnit skip
 mvn clean package war:war -DskipTests
 
-// /tartget/ROOT.war 확인
-// /tartget/ROOT.war check
+// /target/ROOT.war 확인
 ```
-
-## Usage
-
-
-```python
-// src/main/resource/application.example.config copy
-// src/main/resource/application.config paste
-// and modify application.config
-
-//The code below is an example of the local environment.
-
-```
-
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-gmail : xhddlf8070@gmail.com
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
