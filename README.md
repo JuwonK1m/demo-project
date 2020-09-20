@@ -1,6 +1,6 @@
 # demo-project
 
-Koreatech 강의평가 & 소스 서비스 프로젝트 BCSDLab Back-End 임시 Repository  
+Koreatech 강의평가 & 소스 서비스 프로젝트 환경구축관련 BCSD Lab Back-End 임시 Repository  
 (정식 Repository는 추후 BCSD Lab Organization에 private로 생성)
 
 ## 환경
